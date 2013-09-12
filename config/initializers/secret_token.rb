@@ -9,4 +9,20 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-TeamEffort::Application.config.secret_key_base = '62ac9f4c1c2a6cda7f575a7211340d2c48bf4b4937067ac14e6bd19e6c2684d2e20cd1d667ab3d54bb1e7cfa607efee044b31f8de7da11a6bba2d9748c89452b'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+TeamEffort::Application.config.secret_key_base = '9099b8f012b7f059bec6306b133a5d75ceba8a1fda238e3289484c410c616ecaa48b380cd20e250aebb6ed218126d1b3b26d4732f2f1f2a6d03c993b404dae9a'
+
+
