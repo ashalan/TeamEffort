@@ -6,9 +6,24 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse navbar-modified">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "Team Effort!", '#', id: "logo" %>
+          <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "Home",    '/static_pages/home' %></li>
+              <li><%= link_to "Help",    '/static_pages/help' %></li>
+              <li><%= link_to "Sign in", '/static_pages/about' %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
 
-<%= yield %>
-
-</body>
 </html>
