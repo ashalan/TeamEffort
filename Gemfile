@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 1.0.2'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 #eventually bootsrap-sass will be updated and we will no longer use this janky branch business
 
+gem 'bcrypt-ruby'
+#for password digest
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

@@ -5,7 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Rails version - 4.0.0
+
+* Ruby version - ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux]
 
 * System dependencies
 
@@ -26,3 +28,9 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+Future color scheme 
+rgb(44, 62, 80) for large boxes (steal this guys color scheme http://jao.io/)
+#18BC9C
+#2C3E50
+and a burnt 
