@@ -1,3 +1,19 @@
-<h1>StaticPages#home</h1>
-<h1>Home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<head>
+<title>TeamEffort</title>
+<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+</head>
+<body>
+<div id="header-wrap">
+	<div class="container id "header>
+		<h1 id="logo">
+			<a href="/">Team<span id='efrt'>Effort</span></a>
+		</h1>
+		<div id='what'>
+		<%= link_to 'What is Team Effort', about_us_path%></div>
+		<ul id="menu-main">
+			<li id="menu-main-discover"><strong>Discover</strong><span> great pledges</span></li>
+			<li id="menu-main-npledge"><strong>Start</strong><span> a pledge</span></li>
+		</ul>
+	</div>
+</div>
+</body>

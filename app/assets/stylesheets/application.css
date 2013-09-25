@@ -11,3 +11,38 @@
  *= require_self
  *= require_tree .
  */
+
+#header-wrap{
+	background-color: white;
+	border-bottom: 1px solid rgb(208, 213, 203);
+}
+
+#logo {
+	float: left;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	vertical-align: baseline;
+	width: 160px;
+	height: 20px;
+	cursor: auto;
+}
+
+#logo a {
+	color: black;
+	font-family: sans-serif;
+	text-decoration: none;
+}
+#efrt{
+	color: green;
+}
+
+body div div h1 a:visited {
+	text-decoration: none;
+	color: green;
+}
+
+#what{
+	color: black;
+}
