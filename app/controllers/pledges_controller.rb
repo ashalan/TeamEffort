@@ -1,5 +1,11 @@
 class PledgesController < ApplicationController
-  before_action :set_pledges, only: [:show, :new, :edit, :update, :destroy, :create]
+  before_action :set_pledges, only: [:show, :edit, :update, :destroy, :create]
+
+  def new
+    respond_to do |format|
+      format.html
+    end
+  end
 
   def show
     respond_to do |format|

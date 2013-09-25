@@ -6,9 +6,40 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body id='body'>
+<div id="header-wrap">
+	<div class="container"header>
+		<h1 id="logo">
+			<a href="/">Team<span id='efrt'>Effort</span></a>
+		</h1>
+		<div id='what'>
+		<%= link_to 'What is TeamEffort?', about_us_path%></div>
+		<ul id="menu-main">
+			<li id="menu-main-discover"><strong>Discover</strong><span> great pledges</span></li>
+			<li id="menu-main-npledge">
+			<% if current_user.present? %>
+			<a href="/users/<%=current_user.id%>/pledges/new"><strong>Start</strong><span> a pledge</span></a></li>
+			<% else %>
+			<a href="/users/sign_in"><strong>Start</strong><span> a pledge</span></a></li>
+			<% end %>
+		</ul>
+		<div id ='search'>
+			<div id = 'search-field'>
+				<span>Search pledges</span>
+			</div>
+		</div>
+		<ul id= 'menu-sub'>
+			<li id = 'helpbtn'><%= link_to 'Help', help_path, id:'menu-main-help'%></li>
+			<% if current_user.present? %>
+			<li id= 'signout'><%= link_to "Sign out", destroy_user_session_path, :method => :delete%></li>
+			<%else%>
+			<li id='signup'><a href='/users/sign_up'>Sign Up</a></li>
+			<li id='signin'><a href='/users/sign_in'>Log in</a></li>
+			<%end%>
+		</ul>
+	</div>
+</div>
+<%=yield%>
 </body>
+
 </html>

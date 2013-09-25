@@ -12,9 +12,23 @@
  *= require_tree .
  */
 
+#body{
+	margin: 0px 0px 0px 0px;
+}
+
 #header-wrap{
 	background-color: white;
 	border-bottom: 1px solid rgb(208, 213, 203);
+	height: 60px;
+	width: 1440px;
+}
+
+.container{
+	display:block;
+	height: 60px;
+	margin: 0px 212.5px 0px 212.5px;
+	vertical-align: baseline;
+	width: 960px;
 }
 
 #logo {
@@ -24,25 +38,362 @@
 	padding: 0px;
 	text-align: left;
 	vertical-align: baseline;
-	width: 160px;
-	height: 20px;
+	width: 190px;
+	height: 50px;
 	cursor: auto;
+	padding: 10px 10px 0px 10px;
 }
 
-#logo a {
+#logo > a {
 	color: black;
-	font-family: sans-serif;
+	font-family: Andale Mono;
 	text-decoration: none;
 }
 #efrt{
-	color: green;
-}
-
-body div div h1 a:visited {
-	text-decoration: none;
-	color: green;
+	color: #0052A3;
 }
 
 #what{
+	border-right: 1px solid rgb(208, 213, 203);
+	color: black;
+	display: block;
+	float: left;
+	font-family: sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	height: 50px;
+	margin: 0px 0px 0px 10px;
+	padding: 10px 10px 0px 10px;
+	text-decoration: none;
+	vertical-align: baseline;
+	width: 85px;
+}
+
+#what:hover{
+	background-color: #F2F2F2;
+}
+
+#what > a {
+	text-decoration: none;
 	color: black;
 }
+
+#menu-main{
+	display:block;
+	float: left;
+	height:60px;
+	padding: 0px 0px 0px 0px;
+	vertical-align: baseline;
+	width: 172px;
+	margin: 0px 0px 0px 0px;
+}
+
+#menu-main li strong{
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	color: #0052A3;
+}
+
+#menu-main li a {
+	text-decoration: none;
+	color: black;
+}
+
+#menu-main li span {
+	color: #75796f;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+#menu-main-discover{
+	border-right: 1px solid rgb(208, 213, 203);
+	display: block;
+	float: left;
+	font-family: sans-serif;
+	font size: 12px;
+	text-align: left;
+	width: 90px;
+	height: 50px;
+	vertical-align: baseline;
+	padding: 10px 0px 0px 10px;
+}
+
+#menu-main-discover:hover{
+	background-color: #F2F2F2;
+}
+
+#menu-main-npledge{
+	border-right: 1px solid rgb(208, 213, 203);
+	display: block;
+	float: left;
+	font-family: sans-serif;
+	font size: 12px;
+	text-align: left;
+	width: 50px;
+	height: 50px;
+	vertical-align: baseline;
+	padding: 10px 10px 0px 10px;
+}
+
+#menu-main-npledge:hover{
+	background-color: #F2F2F2;
+}
+
+#search{
+	height: 57px;
+	width: 245px;
+	display: block;
+	float:left;
+	padding: 3px 0px 0px 10px;
+	border-right: 1px solid rgb(208, 213, 203);
+}
+
+#search-field{
+	height: 24px;
+	width: 232px;
+	border: 1px solid #C8C8C8;
+	border-radius: 15px;
+	display: block;
+	float: left;
+	vertical-align: baseline;
+	margin-top: 12px;
+}
+
+#search-field span{
+	color: #75796f;
+	font-family: sans-serif;
+	font-size: 12px;
+	padding: 5px 0px 0px 10px;
+	display: block;
+}
+
+#menu-sub {
+	height: 60px;
+	width: 200px;
+	display: block;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+}
+
+#helpbtn {
+	padding: 0px;
+	margin: 0px;
+	display: block;
+	height: 20px;
+	width: 50px;
+}
+
+#menu-main-help{
+	height: 60px;
+	width: 40px;
+	display: block;
+	font-family: sans-serif;
+	font-size: 12px;
+	padding: 20px 0px 0px 10px;
+	text-decoration: none;
+	float: left;
+}
+
+#menu-main-help:visited{
+	text-decoration: none;
+	color: #75796f;
+}
+
+#signup{
+	height: 60px;
+	width: 50px;
+	display: block;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 12px;
+	float: left;
+	text-decoration: none;
+}
+
+#signup >a{
+	text-decoration: none;
+}
+
+#signup a:visited{
+	color: #0052A3;
+	text-decoration: none;
+}
+
+#signin{
+	height: 60px;
+	width: 50px;
+	display: block;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 12px;
+	float: left;
+	text-decoration: none;
+	color: #0052A3;
+	padding-left: 10px;
+}
+
+#signin >a{
+	text-decoration: none;
+}
+
+#signin a:visited{
+	color: #0052A3;
+	text-decoration: none;
+}
+
+#signout{
+	height: 60px;
+	width: 50px;
+	display: block;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 12px;
+	float: left;
+	text-decoration: none;
+	color: #0052A3;
+	padding-left: 10px;
+}
+
+#signout >a{
+	text-decoration: none;
+}
+
+#signout a:visited{
+	color: #0052A3;
+	text-decoration: none;
+}
+
+#new-user-wrap{
+	width: 1440px;
+	padding: 50px 212.5px 0px 225px;
+}
+
+#new-user-container{
+	padding: 20px 20px 20px 20px;
+	background-color: #F2F2F2;
+	width: 325px;
+	height: 450px;
+}
+
+#new-user-container2{
+	padding: 20px 20px 20px 40px;
+	background-color: #F2F2F2;
+	width: 305px;
+	height: 250px;
+}
+
+#NewtoTE{
+	margin: 0px 0px 5px 0px;
+	font-family: sans-serif;
+	font-weight: normal;
+}
+
+#required{
+	margin: 5px 0px 30px 0px;
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	color: #75796f;
+}
+
+#email{
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 6px 0px 6px 0px;
+}
+
+#fname{
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 6px 0px 6px 0px;
+}
+
+#lname{
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 6px 0px 6px 0px;
+}
+
+#pass{
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 6px 0px 6px 0px;
+}
+
+#passcheck{
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 6px 0px 6px 0px;
+}
+
+#signupbtn {
+	width: 118px;
+	height: 42px;
+	border-radius: 10px;
+	color: white;
+	background-color: #0052A3;
+	border: none;
+	font-size: 15px;
+	font-family: sans-serif;
+	font-weight: lighter;
+}
+
+#signupbtn:hover{
+	color: #0052A3;
+	background-color: white;
+}
+
+#fnamefld{
+	height: 15px;
+	padding: 6px 0px 6px 0px;
+	margin: 6px 0px 6px 0px;
+	width: 208px;
+	text-align: start;
+	border-radius: 5px;
+}
+
+#lnamefld{
+	height: 15px;
+	padding: 6px 0px 6px 0px;
+	margin: 6px 0px 6px 0px;
+	width: 208px;
+	text-align: start;
+	border-radius: 5px;
+}
+#emailfld{
+	height: 15px;
+	padding: 6px 0px 6px 0px;
+	margin: 6px 0px 6px 0px;
+	width: 208px;
+	text-align: start;
+	border-radius: 5px;
+}
+#passfld{
+	height: 15px;
+	padding: 6px 0px 6px 0px;
+	margin: 6px 0px 6px 0px;
+	width: 208px;
+	text-align: start;
+	border-radius: 5px;
+}
+#passchkfld{
+	height: 15px;
+	padding: 6px 0px 6px 0px;
+	margin: 6px 0px 6px 0px;
+	width: 208px;
+	text-align: start;
+	border-radius: 5px;
+}
+
+#remember {
+	margin-bottom: 10px;
+}
+
+#pass a{
+	font-size: 10px;
+	float: right;
+	margin-right: 100px;
+}
+
