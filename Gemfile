@@ -46,3 +46,5 @@ gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'thin'
+gem 'sunspot_solr'
+gem 'sunspot_rails'

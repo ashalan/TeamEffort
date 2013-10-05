@@ -1,7 +1,9 @@
 class PledgesController < ApplicationController
-  before_action :set_pledges, only: [:show, :edit, :update, :destroy, :create]
+  before_action :set_pledge, only: [:show, :edit, :update, :destroy]
 
   def new
+    @user = current_user
+    @pledge = @user.pledges.new
     respond_to do |format|
       format.html
     end
@@ -14,13 +16,14 @@ class PledgesController < ApplicationController
   end
 
   def index
-    @pledge = Effort.all
+    @pledge = Pledge.all
     respond_to do |format|
       format.html
     end
   end
 
   def create
+    @user = current_user
     @pledge = @user.pledges.create(pledge_params)
     respond_to do |format|
       if @pledge.valid?
@@ -56,15 +59,26 @@ class PledgesController < ApplicationController
       redirect_to user_pledge_path(@user, @pledge)
     end
   end
+
+  def search
+      @search = Pledge.search do
+      fulltext params[:search]
+    end
+    @pledges = @search.results
+  end
+
   private
   # below this line thar be dragons
 
   def pledge_params
-    params.require(:user).permit(:name, :created_by, :user_id)
+    params.require(:pledge).permit(:name, :created_by, :user_id)
   end
 
   def set_pledge
-    @user = current_user
+    @user = User.find(params[:user_id])
     @pledge = @user.pledges.where(id: params[:id]).first
   end
+
+
+
 end

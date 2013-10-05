@@ -1,0 +1,10 @@
+<div id='ListWrap'>
+	<div id='new-user-wrap'>
+		<h2 id='ListTitle'>Pledge Discovery</h2>
+		<ul id='LPcontainer'>
+			<% for pledge in @pledge %>
+				<li id='pledge-card'><%= pledge.name%></li>
+			<%end%>
+		</ul>
+	</div>
+</div>

@@ -15,7 +15,7 @@
 		<div id='what'>
 		<%= link_to 'What is TeamEffort?', about_us_path%></div>
 		<ul id="menu-main">
-			<li id="menu-main-discover"><strong>Discover</strong><span> great pledges</span></li>
+			<a href = '/discover'><li id="menu-main-discover"><strong>Discover</strong><span> great pledges</span></li></a>
 			<li id="menu-main-npledge">
 			<% if current_user.present? %>
 			<a href="/users/<%=current_user.id%>/pledges/new"><strong>Start</strong><span> a pledge</span></a></li>
@@ -24,9 +24,7 @@
 			<% end %>
 		</ul>
 		<div id ='search'>
-			<div id = 'search-field'>
-				<span>Search pledges</span>
-			</div>
+			<%= text_field_tag(:search, params[:search], :placeholder => "Search for Pledges", id:'magglass', type:'search') %>			
 		</div>
 		<ul id= 'menu-sub'>
 			<li id = 'helpbtn'><%= link_to 'Help', help_path, id:'menu-main-help'%></li>

@@ -3,4 +3,8 @@ class Pledge < ActiveRecord::Base
 
   belongs_to :user, foreign_key: 'created_by'
   belongs_to :pledgers, foreign_key: 'user_id'
+
+  searchable do
+    text :name
+  end
 end

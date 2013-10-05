@@ -1,2 +1,17 @@
 <div id='start-wrap'>
+	<div id='start-container'>
+	  <%= form_for([@user, @pledge]) do |f| %>
+
+	  <div id='pname'><%= f.label :name %><br />
+	  <%= f.text_field :name, id: 'pnamefld' %></div>
+
+	  <div id='pcreator'>
+	  <%= f.hidden_field :created_by, value: current_user.id%></div>
+
+	  <div id='pcreator'>
+	  <%= f.hidden_field :user_id, value: current_user.id%></div>
+
+	  <div><%= f.submit "Create Pledge", id:'signupbtn'%></div>
+	  <% end %>
+	</div>
 </div>
